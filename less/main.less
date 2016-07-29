@@ -33,6 +33,10 @@ a:hover, a:focus {
 	color: @brown!important;
 }
 
+img{
+	width: 100%;
+}
+
 * {
 	outline: none!important;
 }
@@ -63,7 +67,7 @@ a:hover, a:focus {
 //MAIN MENU
 header{
 	background-image: url('../img/gallery_1.jpg');
-	min-height: 500px;
+	min-height: 1024px;
 }
 
 .navbar{
@@ -141,4 +145,61 @@ header{
 		margin: 0 auto;
 	}
 
+}
+
+
+.features-block{
+
+	article{
+		padding-top: 83px;
+		padding-bottom: 80px;
+		position: relative;
+		&:hover h1, &:hover p, &:hover i{
+			color: @brown;
+		}
+		&:hover p:after{
+			background-color: @brown;
+		}
+		
+		i{
+			display: block;
+			.text-center;
+			font-size: 47px;
+			
+
+		}
+
+		h1{
+			.text-center;
+			position: relative;
+			color: #555;
+			font-family: 'Raleway';
+			font-size: 22px;
+			font-weight: 600;
+		}
+
+		h1:before{
+			content: "";
+			display: block;
+
+		}
+
+		p{
+			.text-center;
+			position: relative;
+			color: #8c8c8c;
+			font-family: 'Montserrat';
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 24px;
+			&:after{
+				content: "";
+				display: block;
+				width: 30%;
+				height: 3px;
+				background-color: #f1eee9;
+				margin: 20px auto 0;
+			}
+		}
+	}
 }
