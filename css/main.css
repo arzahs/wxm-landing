@@ -6767,9 +6767,49 @@ img {
   color: #fff!important;
   cursor: pointer;
 }
+@media (max-width: 991px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,
+  .navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in {
+    display: block !important;
+  }
+}
 header {
   background-image: url('../img/gallery_1.jpg');
   min-height: 1024px;
+}
+.bg-img {
+  background-size: auto;
 }
 .navbar {
   border: 0;
@@ -6790,43 +6830,6 @@ header {
   display: block;
   margin: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .navbar h1 {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-  .navbar h1 > li {
-    float: none;
-  }
-  .navbar h1 > li > a {
-    text-align: center;
-    margin-bottom: 5px;
-  }
-  .navbar h1 > .dropdown .dropdown-menu {
-    top: auto;
-    left: auto;
-  }
-  .navbar a.navbar-brand {
-    float: none;
-    text-align: center;
-  }
-  .navbar img {
-    width: 25%;
-    display: block!important;
-    margin-left: auto!important;
-    margin-right: auto!important;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
-  .navbar h1 > li {
-    display: table-cell;
-    width: 1%;
-  }
-  .navbar h1 > li > a {
-    margin-bottom: 0;
-  }
-}
 .navbar .navbar-toggle {
   position: relative;
   padding: 11px 10px;
@@ -6837,7 +6840,7 @@ header {
   border: 1px solid #888;
   border-radius: 4px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .navbar .navbar-collapse {
     background-color: #191919;
   }
@@ -6853,7 +6856,9 @@ header {
   color: #998675;
   background-color: inherit;
 }
-.navbar ul.navbar-nav li.active a:hover {
+.navbar ul.navbar-nav li.active a:hover,
+.navbar ul.navbar-nav li.active a:active,
+.navbar ul.navbar-nav li.active a:focus {
   background-color: inherit;
   cursor: default;
 }
@@ -7064,6 +7069,12 @@ header {
   color: #fff;
   border: 0;
   padding: 3px 11px;
+}
+@media screen and (max-width: 767px) {
+  .tab-example article {
+    max-width: 390px;
+    margin: 0 auto;
+  }
 }
 .tab-example article {
   margin-bottom: 30px;
